@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DIVI-HER Bogotá | El #1 para Bajar de Peso · Domicilio Gratis</title>
+<meta name="description" content="DIVI-HER en Bogotá: suplemento natural #1 para bajar de peso. Reduce apetito, quema grasa y elimina ansiedad. Domicilio rápido en toda Bogotá. Registro INVIMA." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --orange: #F26B22;
+    --orange-dark: #C9491A;
+    --orange-soft: #FFE8D6;
+    --green: #2E7D4F;
+    --green-soft: #DFF2E5;
+    --cream: #FFF8EF;
+    --ink: #1F1B16;
+    --muted: #6B6259;
+    --shadow: 0 25px 60px -20px rgba(31, 27, 22, 0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  .serif { font-family: 'Fraunces', serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* ====== NAV ====== */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255, 248, 239, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(31, 27, 22, 0.06);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 24px; max-width: 1200px; margin: 0 auto;
+  }
+  .logo { font-family: 'Fraunces', serif; font-weight: 800; font-size: 24px; color: var(--ink); }
+  .logo span { color: var(--orange); }
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: 15px; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--orange); }
+  .nav-cta {
+    background: var(--green); color: white; padding: 10px 20px;
+    border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 14px;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(46, 125, 79, 0.3); }
+  @media (max-width: 768px) { .nav-links { display: none; } }
+
+  /* ====== HERO ====== */
+  .hero {
+    position: relative;
+    padding: 80px 0 100px;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, var(--orange-soft) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: -150px; left: -150px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, var(--green-soft) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.1fr 1fr;
+    gap: 60px; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green-soft); color: var(--green);
+    padding: 8px 16px; border-radius: 50px;
+    font-size: 13px; font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .badge .dot {
+    width: 8px; height: 8px; background: var(--green);
+    border-radius: 50%; animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 50% { opacity: 0.4; } }
+  h1.hero-title {
+    font-size: clamp(40px, 5.5vw, 68px);
+    margin-bottom: 24px;
+  }
+  h1.hero-title em { color: var(--orange); font-style: italic; }
+  .hero-sub {
+    font-size: 19px; color: var(--muted);
+    margin-bottom: 36px; max-width: 520px;
+  }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+  .btn-primary {
+    background: var(--orange); color: white;
+    padding: 18px 32px; border-radius: 50px;
+    text-decoration: none; font-weight: 700; font-size: 16px;
+    display: inline-flex; align-items: center; gap: 10px;
+    transition: all 0.3s;
+    box-shadow: 0 12px 30px rgba(242, 107, 34, 0.35);
+  }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(242, 107, 34, 0.45); }
+  .btn-secondary {
+    background: white; color: var(--ink);
+    padding: 18px 32px; border-radius: 50px;
+    text-decoration: none; font-weight: 600; font-size: 16px;
+    border: 1.5px solid rgba(31, 27, 22, 0.12);
+    display: inline-flex; align-items: center; gap: 10px;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--ink); }
+  .hero-trust { display: flex; gap: 32px; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); }
+  .trust-item .icon {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--orange-soft); color: var(--orange);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+
+  .hero-product {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .product-card {
+    background: white;
+    border-radius: 32px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    position: relative;
+    transform: rotate(-2deg);
+    max-width: 420px;
+    width: 100%;
+  }
+  .product-card::before {
+    content: 'NUEVO';
+    position: absolute; top: -16px; right: 24px;
+    background: var(--orange); color: white;
+    padding: 8px 18px; border-radius: 50px;
+    font-size: 12px; font-weight: 800; letter-spacing: 0.1em;
+    transform: rotate(2deg);
+  }
+  .bottle {
+    width: 100%; max-width: 280px;
+    margin: 0 auto 20px; display: block;
+    filter: drop-shadow(0 20px 30px rgba(242, 107, 34, 0.25));
+  }
+  .product-name {
+    font-family: 'Fraunces', serif; font-weight: 800;
+    font-size: 32px; text-align: center; margin-bottom: 8px;
+  }
+  .product-name span { color: var(--orange); }
+  .product-meta { text-align: center; color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+  .product-price {
+    text-align: center; padding-top: 20px;
+    border-top: 1px dashed rgba(31, 27, 22, 0.15);
+  }
+  .price-old { color: var(--muted); text-decoration: line-through; font-size: 18px; margin-right: 12px; }
+  .price-new { font-family: 'Fraunces', serif; font-weight: 800; font-size: 38px; color: var(--green); }
+
+  .float-badge {
+    position: absolute;
+    background: white;
+    padding: 14px 20px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(31, 27, 22, 0.15);
+    display: flex; align-items: center; gap: 10px;
+    font-size: 14px; font-weight: 600;
+  }
+  .float-badge.b1 { top: 10%; left: -20px; transform: rotate(-5deg); }
+  .float-badge.b2 { 
+    bottom: -10px; 
+    right: -10px; 
+    transform: rotate(2deg) scale(0.88);
+    padding: 10px 14px;
+    font-size: 12px;
+    max-width: 150px;
+  }
+  .float-badge .emoji { font-size: 24px; }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero { padding: 50px 0 60px; }
+    .float-badge.b1 { left: 0; }
+    .float-badge.b2 { right: 0; }
+  }
+
+  /* ====== STATS BAR ====== */
+  .stats {
+    background: var(--ink); color: white;
+    padding: 50px 0;
+  }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 30px; text-align: center;
+  }
+  .stat-num {
+    font-family: 'Fraunces', serif; font-weight: 800;
+    font-size: 56px; color: var(--orange);
+    line-height: 1;
+  }
+  .stat-label { font-size: 14px; color: rgba(255,255,255,0.7); margin-top: 8px; }
+  @media (max-width: 700px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ====== SECTION HEADER ====== */
+  section { padding: 90px 0; }
+  .sec-eyebrow {
+    color: var(--orange); font-weight: 700; font-size: 14px;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .sec-title { font-size: clamp(32px, 4vw, 52px); margin-bottom: 20px; }
+  .sec-sub { font-size: 18px; color: var(--muted); max-width: 640px; margin-bottom: 56px; }
+  .sec-head-center { text-align: center; }
+  .sec-head-center .sec-sub { margin-left: auto; margin-right: auto; }
+
+  /* ====== BENEFITS ====== */
+  .benefits-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .benefit {
+    background: white; padding: 36px 28px;
+    border-radius: 24px;
+    border: 1px solid rgba(31, 27, 22, 0.06);
+    transition: all 0.3s;
+  }
+  .benefit:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+  .benefit-icon {
+    width: 56px; height: 56px;
+    background: var(--orange-soft); color: var(--orange);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; margin-bottom: 20px;
+  }
+  .benefit:nth-child(even) .benefit-icon { background: var(--green-soft); color: var(--green); }
+  .benefit h3 { font-family: 'Fraunces', serif; font-weight: 700; font-size: 22px; margin-bottom: 10px; }
+  .benefit p { color: var(--muted); font-size: 15px; }
+  @media (max-width: 900px) { .benefits-grid { grid-template-columns: 1fr; } }
+
+  /* ====== INGREDIENTS ====== */
+  .ingredients-section {
+    background: linear-gradient(180deg, var(--cream) 0%, white 100%);
+  }
+  .ingredients-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+  }
+  .ingredient {
+    background: white; padding: 28px 20px;
+    border-radius: 20px; text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+  .ingredient:hover { border-color: var(--orange); transform: translateY(-4px); }
+  .ing-emoji {
+    font-size: 48px; margin-bottom: 12px; display: block;
+  }
+  .ing-name {
+    font-family: 'Fraunces', serif; font-weight: 700;
+    font-size: 18px; margin-bottom: 6px;
+  }
+  .ing-desc { font-size: 13px; color: var(--muted); }
+  @media (max-width: 900px) { .ingredients-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ====== HOW IT WORKS ====== */
+  .how-section { background: var(--ink); color: white; }
+  .how-section .sec-title { color: white; }
+  .how-section .sec-sub { color: rgba(255,255,255,0.7); }
+  .how-grid {
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center;
+  }
+  .how-steps { display: flex; flex-direction: column; gap: 28px; }
+  .step {
+    display: flex; gap: 20px; align-items: flex-start;
+    padding: 24px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 20px;
+    border-left: 3px solid var(--orange);
+  }
+  .step-num {
+    font-family: 'Fraunces', serif; font-weight: 800;
+    font-size: 36px; color: var(--orange);
+    line-height: 1; min-width: 50px;
+  }
+  .step h4 { font-family: 'Fraunces', serif; font-size: 22px; margin-bottom: 6px; }
+  .step p { color: rgba(255,255,255,0.7); font-size: 15px; }
+  .how-img {
+    width: 100%; border-radius: 24px;
+    aspect-ratio: 4/5; object-fit: cover;
+  }
+  @media (max-width: 900px) { .how-grid { grid-template-columns: 1fr; } }
+
+  /* ====== TRANSFORMATIONS ====== */
+  .trans-section { background: var(--orange-soft); }
+  
+.trans-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.testimonial-real {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    align-items: stretch;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.10);
+    transition: all 0.35s ease;
+}
+
+.testimonial-real:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.14);
+}
+
+.testimonial-real .trans-images {
+    background: #0d0d0d;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-real img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.testimonial-real .trans-body {
+    padding: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-real .trans-stars {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.testimonial-real .trans-name {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.testimonial-real .trans-location {
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.testimonial-real .trans-quote {
+    font-size: 17px;
+    line-height: 1.85;
+    color: var(--muted);
+}
+
+@media (max-width: 900px) {
+    .testimonial-real {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-real .trans-images {
+        min-height: auto;
+    }
+
+    .testimonial-real .trans-body {
+        padding: 28px;
+    }
+}
+
+  .testimonial-real img {
+    width: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+  }
+
+  .testimonial-real img {
+    background: #000;
+    min-height: 320px;
+  }
+
+
+  /* ====== DELIVERY (BOGOTÁ) ====== */
+  .delivery-section {
+    background: linear-gradient(135deg, var(--green) 0%, #1F5C39 100%);
+    color: white;
+    position: relative; overflow: hidden;
+  }
+  .delivery-section::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: rgba(255,255,255,0.05); border-radius: 50%;
+  }
+  .delivery-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .delivery-section .sec-title { color: white; }
+  .delivery-list { list-style: none; margin: 30px 0; }
+  .delivery-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; gap: 14px;
+    font-size: 16px;
+  }
+  .delivery-list li:last-child { border-bottom: none; }
+  .delivery-list .check {
+    width: 28px; height: 28px; background: var(--orange);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: 800; flex-shrink: 0;
+  }
+  .map-card {
+    background: white; color: var(--ink);
+    border-radius: 24px; padding: 32px;
+    box-shadow: var(--shadow);
+  }
+  .map-title { font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; margin-bottom: 20px; }
+  .zones-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+    margin-bottom: 24px;
+  }
+  .zone {
+    padding: 8px 12px; background: var(--cream);
+    border-radius: 8px; font-size: 13px; color: var(--muted);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .zone::before { content: '📍'; }
+  @media (max-width: 900px) { .delivery-grid { grid-template-columns: 1fr; } }
+
+  /* ====== FAQ ====== */
+  .faq-list { max-width: 800px; margin: 0 auto; }
+  details {
+    background: white; border-radius: 16px; padding: 24px 28px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(31, 27, 22, 0.08);
+    transition: all 0.2s;
+  }
+  details[open] { border-color: var(--orange); box-shadow: var(--shadow); }
+  summary {
+    font-family: 'Fraunces', serif; font-weight: 600; font-size: 19px;
+    cursor: pointer; list-style: none;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '+'; font-size: 28px; color: var(--orange); font-weight: 300;
+    transition: transform 0.2s;
+  }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { margin-top: 16px; color: var(--muted); font-size: 16px; }
+
+  /* ====== FINAL CTA ====== */
+  .final-cta {
+    background: var(--ink); color: white; text-align: center;
+    padding: 120px 0;
+    position: relative; overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute; top: 50%; left: 50%;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(242, 107, 34, 0.2) 0%, transparent 60%);
+    transform: translate(-50%, -50%);
+  }
+  .final-cta > * { position: relative; z-index: 1; }
+  .final-cta h2 { font-size: clamp(36px, 5vw, 60px); margin-bottom: 24px; }
+  .final-cta h2 em { color: var(--orange); font-style: italic; }
+  .final-cta p { color: rgba(255,255,255,0.75); font-size: 19px; max-width: 600px; margin: 0 auto 40px; }
+
+  /* ====== FOOTER ====== */
+  footer {
+    background: #0F0D0A; color: rgba(255,255,255,0.6);
+    padding: 60px 0 30px;
+    font-size: 14px;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px; margin-bottom: 40px;
+  }
+  .footer-grid h5 { color: white; font-family: 'Fraunces', serif; font-size: 18px; margin-bottom: 16px; }
+  .footer-grid ul { list-style: none; }
+  .footer-grid li { margin-bottom: 8px; }
+  .footer-grid a { color: rgba(255,255,255,0.6); text-decoration: none; }
+  .footer-grid a:hover { color: var(--orange); }
+  .footer-bottom {
+    padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    font-size: 13px;
+  }
+  .disclaimer {
+    background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;
+    margin-bottom: 30px; font-size: 12px; line-height: 1.6;
+  }
+  @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: 30px; } }
+
+  /* ====== WHATSAPP FLOAT ====== */
+  .wa-float {
+    position: fixed; bottom: 24px; right: 24px;
+    background: #25D366; color: white;
+    width: 64px; height: 64px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px; text-decoration: none;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    z-index: 99;
+    animation: bounce 2.5s infinite;
+  }
+  
+  .stat-num {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .stats-grid > div:hover .stat-num {
+    transform: scale(1.08);
+  }
+
+  .counter.animate-pop {
+    animation: popCounter 0.6s ease;
+  }
+
+  @keyframes popCounter {
+    0% { transform: scale(0.7); opacity: 0.4; }
+    60% { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .wa-float:hover { transform: scale(1.1); }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Divi<span>Her</span> · Bogotá</div>
+    <div class="nav-links">
+      <a href="#beneficios">Beneficios</a>
+      <a href="#ingredientes">Ingredientes</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#domicilios">Domicilios</a>
+      <a href="#faq">Preguntas</a>
+    </div>
+    <a href="https://wa.me/573159251354?text=Hola,%20quiero%20pedir%20DIVI-HER%20a%20Bogot%C3%A1" class="nav-cta">
+      💬 Pedir ahora
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="badge"><span class="dot"></span> Producto #1 en Colombia para bajar de peso</div>
+        <h1 class="serif hero-title">Baja de peso de forma <em>natural</em> con DIVI-HER</h1>
+        <p class="hero-sub">El suplemento dietario natural más vendido en Bogotá. Reduce el apetito, quema grasa acumulada y elimina la ansiedad por comer. <strong>Domicilio rápido en toda Bogotá.</strong></p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/573159251354?text=Hola,%20quiero%20pedir%20DIVI-HER%20a%20Bogot%C3%A1" class="btn-primary">
+            🛒 Pedir mi DIVI-HER
+          </a>
+          <a href="#beneficios" class="btn-secondary">Conocer beneficios →</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><span class="icon">✓</span> Registro INVIMA</div>
+          <div class="trust-item"><span class="icon">🌱</span> 100% Natural</div>
+          <div class="trust-item"><span class="icon">🚀</span> Envío mismo día</div>
+        </div>
+      </div>
+      <div class="hero-product">
+        <div class="product-card">
+          <img src="diviher header.svg" alt="Frasco DIVI-HER 60 cápsulas" class="bottle" onerror="this.style.display='none'" />
+          <div class="product-name">DIVI<span>-HER</span></div>
+          <div class="product-meta">60 cápsulas · Suplemento Dietario<br/>Registro INVIMA SD2021-0001401-R1</div>
+          <div class="product-price">
+            <span class="price-old">$170.000</span>
+            <span class="price-new">$140.000</span>
+          </div>
+        </div>
+        <div class="float-badge b1">
+          <span class="emoji">⭐</span>
+          <span>4.9/5 · 2,400+ clientes</span>
+        </div>
+        <div class="float-badge b2">
+          <span class="emoji">🚴</span>
+          <span>Domicilio en 24h<br/>en Bogotá</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats" style="padding: 50px 0;">
+  <div class="container">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-num counter" data-target="8">0</div>
+        <div class="stat-label">Ingredientes naturales</div>
+      </div>
+      <div>
+        <div class="stat-num counter" data-target="60">0</div>
+        <div class="stat-label">Cápsulas por frasco</div>
+      </div>
+      <div>
+        <div class="stat-num counter" data-target="24" data-suffix="h">0</div>
+        <div class="stat-label">Domicilio en Bogotá</div>
+      </div>
+      <div>
+        <div class="stat-num counter" data-target="0">0</div>
+        <div class="stat-label">Químicos sintéticos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="beneficios">
+  <div class="container">
+    <div class="sec-head-center">
+      <div class="sec-eyebrow">Beneficios comprobados</div>
+      <h2 class="serif sec-title">¿Por qué <em style="color: var(--orange); font-style: italic;">DIVI-HER</em> es el #1 para adelgazar?</h2>
+      <p class="sec-sub">Una fórmula única que ataca el sobrepeso desde múltiples frentes, sin efectos secundarios ni rebote.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit">
+        <div class="benefit-icon">🍽️</div>
+        <h3>Reduce el apetito</h3>
+        <p>El Glucomanano de Konjac se expande hasta 200 veces en el estómago, generando saciedad inmediata. Adiós a la ansiedad por comer.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">🔥</div>
+        <h3>Quema grasa acumulada</h3>
+        <p>Activa la lipólisis a nivel celular, eliminando la grasa localizada en abdomen, cadera y muslos. Resultados visibles en semanas.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">⚡</div>
+        <h3>Acelera el metabolismo</h3>
+        <p>El té verde y las vitaminas B1 y B6 transforman los alimentos en energía, evitando que se conviertan en grasa.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">🧘</div>
+        <h3>Elimina la ansiedad</h3>
+        <p>El Cromo regula los antojos por dulces y harinas. Recupera el control sobre tu alimentación de forma natural.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">💧</div>
+        <h3>Mejora la digestión</h3>
+        <p>La Linaza y la Berenjena depuran el organismo, combaten el estreñimiento y mejoran el tránsito intestinal.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">❤️</div>
+        <h3>Regula colesterol y azúcar</h3>
+        <p>Ayuda a equilibrar los niveles de azúcar en sangre y reduce el colesterol malo, cuidando tu corazón.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INGREDIENTS -->
+<section id="ingredientes" class="ingredients-section">
+  <div class="container">
+    <div class="sec-head-center">
+      <div class="sec-eyebrow">Fórmula natural</div>
+      <h2 class="serif sec-title">8 ingredientes que <em style="color: var(--green); font-style: italic;">funcionan</em></h2>
+      <p class="sec-sub">Cada cápsula combina principios activos naturales seleccionados por su poder para transformar tu cuerpo.</p>
+    </div>
+    <div class="ingredients-grid">
+      <div class="ingredient">
+        <span class="ing-emoji">🌾</span>
+        <div class="ing-name">Linaza</div>
+        <div class="ing-desc">Fibra que limpia el organismo y mejora la digestión.</div>
+      </div>
+      <div class="ingredient">
+        <span class="ing-emoji">🌱</span>
+        <div class="ing-name">Glucomanano</div>
+        <div class="ing-desc">Genera saciedad instantánea como bypass gástrico natural.</div>
+      </div>
+      <div class="ingredient">
+        <span class="ing-emoji">🍵</span>
+        <div class="ing-name">Té Verde</div>
+        <div class="ing-desc">Antioxidante y termogénico. Acelera la quema de grasa.</div>
+      </div>
+      <div class="ingredient">
+        <span class="ing-emoji">⚙️</span>
+        <div class="ing-name">Cromo</div>
+        <div class="ing-desc">Controla los antojos por dulces y carbohidratos.</div>
+      </div>
+      <div class="ingredient">
+        <span class="ing-emoji">🍆</span>
+        <div class="ing-name">Berenjena</div>
+        <div class="ing-desc">Depura grasas y reduce el colesterol malo.</div>
+      </div>
+      <div class="ingredient">
+        <span class="ing-emoji">💊</span>
+        <div class="ing-name">Vitamina B1</div>
+        <div class="ing-desc">Convierte alimentos en energía, no en grasa.</div>
+      </div>
+      <div class="ingredient">
+        <span class="ing-emoji">💊</span>
+        <div class="ing-name">Vitamina B6</div>
+        <div class="ing-desc">Equilibra hormonas y mejora el ánimo.</div>
+      </div>
+      <div class="ingredient">
+        <span class="ing-emoji">✨</span>
+        <div class="ing-name">Zinc</div>
+        <div class="ing-desc">Refuerza el sistema inmune y la regeneración celular.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="container">
+    <div class="how-grid">
+      <div>
+        <div class="sec-eyebrow">Modo de uso</div>
+        <h2 class="serif sec-title" style="color: white;">Tan fácil como <em style="color: var(--orange); font-style: italic;">3 pasos</em></h2>
+        <p class="sec-sub" style="color: rgba(255,255,255,0.7);">Una rutina simple para empezar a ver resultados desde la primera semana.</p>
+        <div class="how-steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div>
+              <h4>Toma 1 cápsula en ayunas</h4>
+              <p>30 minutos antes del desayuno con 1 a 2 vasos de agua tibia.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div>
+              <h4>Hidrátate durante el día</h4>
+              <p>Toma entre 8 y 10 vasos de agua al día para potenciar el efecto.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <div>
+              <h4>Ve los resultados</h4>
+              <p>Reduce el apetito desde el día 1. Pierde peso visible en 30 días.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="Diseño sin título.svg" alt="Estilo de vida saludable" class="how-img" onerror="this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80'" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORMATIONS -->
+<section id="resultados" class="trans-section">
+  <div class="container">
+    <div class="sec-head-center">
+      <div class="sec-eyebrow">Resultados reales</div>
+      <h2 class="serif sec-title">Antes y después de <em style="color: var(--orange); font-style: italic;">nuestros clientes</em></h2>
+      <p class="sec-sub">Miles de personas en Bogotá ya han transformado su cuerpo con DIVI-HER. Tú puedes ser el siguiente.</p>
+    </div>
+    <div class="trans-grid">
+      <div class="trans-card testimonial-real">
+        <div class="trans-images"><img src="1.svg" alt="Transformación cliente DIVI-HER"></div>
+        <div class="trans-body">
+          <div class="trans-stars">★★★★★</div>
+          <div class="trans-name">Sandra M.</div>
+          <div class="trans-location">📍 Bogotá · Resultado en 90 días</div>
+          <p class="trans-quote">“Pensé que nunca volvería a sentirme segura con mi cuerpo. DIVI‑HER me ayudó a controlar la ansiedad y empecé a ver cambios reales desde el primer mes.”</p>
+        </div>
+      </div>
+
+      <div class="trans-card testimonial-real">
+        <div class="trans-images"><img src="2.svg" alt="Transformación cliente DIVI-HER"></div>
+        <div class="trans-body">
+          <div class="trans-stars">★★★★★</div>
+          <div class="trans-name">Valentina R.</div>
+          <div class="trans-location">📍 Bogotá · Cambio visible en semanas</div>
+          <p class="trans-quote">“Había probado muchísimas cosas y nada me funcionaba. Con DIVI‑HER bajé talla, recuperé energía y me siento increíble.”</p>
+        </div>
+      </div>
+
+      <div class="trans-card testimonial-real">
+        <div class="trans-images"><img src="3.svg" alt="Transformación cliente DIVI-HER"></div>
+        <div class="trans-body">
+          <div class="trans-stars">★★★★★</div>
+          <div class="trans-name">Laura C.</div>
+          <div class="trans-location">📍 Bogotá · Más confianza y bienestar</div>
+          <p class="trans-quote">“Lo que más me gustó fue sentirme más liviana y volver a usar la ropa que tenía guardada. Los resultados se notan muchísimo.”</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY BOGOTÁ -->
+<section id="domicilios" class="delivery-section">
+  <div class="container">
+    <div class="delivery-grid">
+      <div>
+        <div class="sec-eyebrow" style="color: var(--orange-soft);">Domicilio Bogotá</div>
+        <h2 class="serif sec-title">Tu DIVI-HER llega <em style="color: var(--orange); font-style: italic;">hoy mismo</em></h2>
+        <p style="color: rgba(255,255,255,0.85); font-size: 18px;">Envío rápido en toda Bogotá. Paga contra entrega o por transferencia.</p>
+        <ul class="delivery-list">
+          <li><span class="check">✓</span> Domicilio gratis por compras superiores a $200.000</li>
+          <li><span class="check">✓</span> Entrega en 24 horas en todas las localidades</li>
+          <li><span class="check">✓</span> Pago contra entrega disponible</li>
+          <li><span class="check">✓</span> Producto 100% original con sello INVIMA</li>
+          <li><span class="check">✓</span> Asesoría gratuita por WhatsApp</li>
+        </ul>
+        <a href="https://wa.me/573159251354?text=Hola,%20quiero%20pedir%20DIVI-HER%20a%20Bogot%C3%A1" class="btn-primary">
+          💬 Pedir por WhatsApp
+        </a>
+      </div>
+      <div class="map-card">
+        <div class="map-title">📍 Cubrimos toda Bogotá</div>
+        <div class="zones-grid">
+          <div class="zone">Chapinero</div>
+          <div class="zone">Usaquén</div>
+          <div class="zone">Suba</div>
+          <div class="zone">Engativá</div>
+          <div class="zone">Kennedy</div>
+          <div class="zone">Fontibón</div>
+          <div class="zone">Teusaquillo</div>
+          <div class="zone">Barrios Unidos</div>
+          <div class="zone">Bosa</div>
+          <div class="zone">Puente Aranda</div>
+          <div class="zone">San Cristóbal</div>
+          <div class="zone">Tunjuelito</div>
+        </div>
+        <p style="font-size: 13px; color: var(--muted); text-align: center;">Y todas las demás localidades. También enviamos a Soacha, Chía y Cajicá.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="sec-head-center">
+      <div class="sec-eyebrow">Preguntas frecuentes</div>
+      <h2 class="serif sec-title">Todo lo que necesitas <em style="color: var(--orange); font-style: italic;">saber</em></h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>¿DIVI-HER tiene efectos secundarios?</summary>
+        <p>No. DIVI-HER está elaborado con ingredientes 100% naturales y no contiene sustancias químicas o sintéticas. Es un suplemento libre de contraindicaciones y efectos secundarios. No se recomienda en embarazo, lactancia ni en menores de edad.</p>
+      </details>
+      <details>
+        <summary>¿En cuánto tiempo se ven los resultados?</summary>
+        <p>La reducción del apetito se nota desde el primer día. La pérdida de peso visible suele aparecer entre la 2ª y 4ª semana, dependiendo de tu metabolismo, alimentación y nivel de actividad física. Lo ideal es hacer un tratamiento de mínimo 3 frascos.</p>
+      </details>
+      <details>
+        <summary>¿Cómo se toma DIVI-HER?</summary>
+        <p>Se recomienda tomar 1 cápsula al día, 30 minutos antes del desayuno y en ayunas, con 1 a 2 vasos de agua tibia. Durante el tratamiento es muy importante mantener una buena hidratación (8 a 10 vasos de agua al día) y reducir el consumo de carbohidratos refinados.</p>
+      </details>
+      <details>
+        <summary>¿Tiene Registro INVIMA?</summary>
+        <p>Sí. DIVI-HER cuenta con Registro INVIMA No. SD2021-0001401-R1, lo cual garantiza su calidad y seguridad para el consumo en Colombia.</p>
+      </details>
+      <details>
+        <summary>¿Interfiere con otros medicamentos o anticonceptivos?</summary>
+        <p>No. DIVI-HER no interfiere con la efectividad de medicamentos ni anticonceptivos. Sin embargo, si estás bajo tratamiento médico especial, consulta con tu médico antes de iniciar el consumo.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto cuesta el domicilio en Bogotá?</summary>
+        <p>El domicilio en Bogotá tiene un costo mínimo según la zona y es GRATIS para compras superiores a $200.000. Realizamos entregas en 24 horas en todas las localidades de Bogotá y municipios cercanos como Soacha, Chía y Cajicá.</p>
+      </details>
+      <details>
+        <summary>¿Puedo pagar contra entrega?</summary>
+        <p>¡Claro que sí! Aceptamos pago contra entrega en efectivo, transferencias por Nequi, Daviplata, Bancolombia y pagos por PSE. Consulta los detalles al momento de hacer tu pedido por WhatsApp.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2 class="serif">Empieza tu <em>transformación</em> hoy</h2>
+    <p>Más de 2,400 personas en Bogotá ya cambiaron su vida con DIVI-HER. Tu cuerpo soñado está a una llamada de distancia.</p>
+    <a href="https://wa.me/573159251354?text=Hola,%20quiero%20pedir%20DIVI-HER%20a%20Bogot%C3%A1" class="btn-primary" style="font-size: 18px; padding: 22px 40px;">
+      💬 Pedir mi DIVI-HER ahora
+    </a>
+    <p style="margin-top: 30px; font-size: 14px; color: rgba(255,255,255,0.5);">⚡ Domicilio en 24h · 🔒 Producto original · ✓ Registro INVIMA</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="color: white; margin-bottom: 16px;">Divi<span>Her</span> · Bogotá</div>
+        <p>Distribuidor autorizado de DIVI-HER (Lifehuni) en Bogotá. Atención personalizada y envíos rápidos a toda la ciudad.</p>
+        <p style="margin-top: 16px;">📱 WhatsApp: +57 315 925 1354<br/>📍 Bogotá, Colombia</p>
+      </div>
+      <div>
+        <h5>Enlaces</h5>
+        <ul>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#ingredientes">Ingredientes</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#domicilios">Domicilios</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Información</h5>
+        <ul>
+          <li>Registro INVIMA SD2021-0001401-R1</li>
+          <li>Pago contra entrega</li>
+          <li>Asesoría gratuita</li>
+          <li>Producto 100% original</li>
+        </ul>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Aviso importante:</strong> DIVI-HER es un suplemento dietario. NO es un medicamento y no suple una alimentación equilibrada. Los resultados varían según cada persona y dependen de la combinación con hábitos de vida saludables, una alimentación balanceada y actividad física regular. Personas con condiciones especiales de salud deben consultar a su médico antes de tomar este producto. No consumir en estado de embarazo o lactancia.
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 DIVI-HER Bogotá · Todos los derechos reservados</div>
+      <div>Diseñado con 🧡 en Bogotá</div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a href="https://wa.me/573159251354?text=Hola,%20quiero%20pedir%20DIVI-HER%20a%20Bogot%C3%A1" class="wa-float" aria-label="WhatsApp">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.counter');
+
+  const animateCounter = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    const suffix = counter.getAttribute('data-suffix') || '';
+    const duration = 1800;
+    const increment = target / (duration / 16);
+
+    let current = 0;
+
+    const updateCounter = () => {
+      current += increment;
+
+      if (current < target) {
+        counter.innerText = Math.floor(current) + suffix;
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.innerText = target + suffix;
+        counter.classList.add('animate-pop');
+      }
+    };
+
+    updateCounter();
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => observer.observe(counter));
+});
+</script>
+
+</body>
+</html>
