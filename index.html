@@ -303,6 +303,7 @@
   .how-img {
     width: 100%; border-radius: 24px;
     aspect-ratio: 4/5; object-fit: cover;
+    background: white;
   }
   @media (max-width: 900px) { .how-grid { grid-template-columns: 1fr; } }
 
@@ -409,6 +410,7 @@
     background: linear-gradient(135deg, var(--green) 0%, #1F5C39 100%);
     color: white;
     position: relative; overflow: hidden;
+    padding: 60px 0;
   }
   .delivery-section::before {
     content: '';
@@ -417,40 +419,174 @@
     background: rgba(255,255,255,0.05); border-radius: 50%;
   }
   .delivery-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
     position: relative; z-index: 1;
   }
-  .delivery-section .sec-title { color: white; }
-  .delivery-list { list-style: none; margin: 30px 0; }
+  .delivery-section .sec-title { color: white; font-size: clamp(26px, 3vw, 36px); margin-bottom: 12px; }
+  .delivery-section .sec-eyebrow { margin-bottom: 10px; }
+  .delivery-list { list-style: none; margin: 20px 0; }
   .delivery-list li {
-    padding: 14px 0;
+    padding: 10px 0;
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    display: flex; align-items: center; gap: 14px;
-    font-size: 16px;
+    display: flex; align-items: center; gap: 12px;
+    font-size: 14px;
   }
   .delivery-list li:last-child { border-bottom: none; }
   .delivery-list .check {
-    width: 28px; height: 28px; background: var(--orange);
+    width: 22px; height: 22px; background: var(--orange);
     border-radius: 50%; display: flex; align-items: center; justify-content: center;
     color: white; font-weight: 800; flex-shrink: 0;
+    font-size: 12px;
   }
   .map-card {
     background: white; color: var(--ink);
-    border-radius: 24px; padding: 32px;
+    border-radius: 20px; padding: 24px;
     box-shadow: var(--shadow);
   }
-  .map-title { font-family: 'Fraunces', serif; font-weight: 700; font-size: 24px; margin-bottom: 20px; }
+  .map-title { font-family: 'Fraunces', serif; font-weight: 700; font-size: 20px; margin-bottom: 14px; }
   .zones-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
-    margin-bottom: 24px;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px;
+    margin-bottom: 16px;
   }
   .zone {
-    padding: 8px 12px; background: var(--cream);
-    border-radius: 8px; font-size: 13px; color: var(--muted);
+    padding: 6px 10px; background: var(--cream);
+    border-radius: 6px; font-size: 12px; color: var(--muted);
     display: flex; align-items: center; gap: 6px;
   }
-  .zone::before { content: '📍'; }
+  .zone::before { content: '📍'; font-size: 11px; }
   @media (max-width: 900px) { .delivery-grid { grid-template-columns: 1fr; } }
+
+  /* ====== MACA-LIFE COMPLEMENT ====== */
+  .maca-section {
+    background: linear-gradient(180deg, var(--green-soft) 0%, var(--cream) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .maca-section::before {
+    content: '';
+    position: absolute; top: -150px; right: -150px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(46, 125, 79, 0.18) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+  .maca-section > .container { position: relative; z-index: 1; }
+  .maca-section .sec-title em { color: var(--green); font-style: italic; }
+
+  .maca-grid {
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 60px; align-items: center;
+    margin-bottom: 60px;
+  }
+  .maca-product-card {
+    background: white;
+    border-radius: 32px;
+    padding: 48px 40px;
+    box-shadow: var(--shadow);
+    position: relative;
+    transform: rotate(2deg);
+    text-align: center;
+  }
+  .maca-product-card::before {
+    content: 'ALIADO PERFECTO';
+    position: absolute; top: -16px; left: 24px;
+    background: var(--green); color: white;
+    padding: 8px 18px; border-radius: 50px;
+    font-size: 12px; font-weight: 800; letter-spacing: 0.1em;
+    transform: rotate(-2deg);
+  }
+  .maca-bottle {
+    width: 100%; max-width: 320px;
+    margin: 0 auto 20px; display: block;
+    filter: drop-shadow(0 20px 30px rgba(46, 125, 79, 0.3));
+  }
+  .maca-product-name {
+    font-family: 'Fraunces', serif; font-weight: 800;
+    font-size: 30px; margin-bottom: 6px;
+  }
+  .maca-product-name span { color: var(--green); }
+  .maca-product-meta {
+    color: var(--muted); font-size: 14px;
+  }
+
+  .maca-info h3 {
+    font-family: 'Fraunces', serif; font-weight: 700;
+    font-size: 28px; margin-bottom: 8px;
+  }
+  .maca-info .maca-lead {
+    color: var(--muted); font-size: 17px; margin-bottom: 28px;
+  }
+  .maca-components {
+    list-style: none;
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 10px 20px;
+  }
+  .maca-components li {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 15px; font-weight: 500;
+    padding: 10px 14px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(46, 125, 79, 0.12);
+    transition: all 0.2s;
+  }
+  .maca-components li:hover {
+    border-color: var(--green);
+    transform: translateX(4px);
+  }
+  .maca-components li::before {
+    content: '🌿';
+    font-size: 16px;
+  }
+
+  .combo-banner {
+    background: linear-gradient(135deg, var(--orange) 0%, var(--green) 100%);
+    border-radius: 32px;
+    padding: 56px 48px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(31, 27, 22, 0.2);
+  }
+  .combo-banner h3 {
+    font-family: 'Fraunces', serif; font-weight: 800;
+    font-size: clamp(28px, 4vw, 42px); margin-bottom: 12px;
+    line-height: 1.1;
+  }
+  .combo-banner h3 .plus {
+    display: inline-block;
+    color: rgba(255,255,255,0.85);
+    margin: 0 8px;
+  }
+  .combo-banner .combo-sub {
+    font-size: 19px; opacity: 0.95;
+    margin-bottom: 36px; font-weight: 500;
+  }
+  .combo-ingredients {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 10px; max-width: 880px; margin: 0 auto 36px;
+  }
+  .combo-tag {
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 9px 18px;
+    border-radius: 50px;
+    font-size: 14px; font-weight: 600;
+  }
+  .combo-banner .btn-primary {
+    background: white;
+    color: var(--ink);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  }
+  .combo-banner .btn-primary:hover {
+    box-shadow: 0 18px 40px rgba(0,0,0,0.3);
+  }
+  @media (max-width: 900px) {
+    .maca-grid { grid-template-columns: 1fr; gap: 40px; }
+    .maca-product-card { transform: none; }
+    .combo-banner { padding: 40px 24px; }
+    .maca-components { grid-template-columns: 1fr; }
+  }
 
   /* ====== FAQ ====== */
   .faq-list { max-width: 800px; margin: 0 auto; }
@@ -599,12 +735,12 @@
       </div>
       <div class="hero-product">
         <div class="product-card">
-          <img src="diviher header.svg" alt="Frasco DIVI-HER 60 cápsulas" class="bottle" onerror="this.style.display='none'" />
+          <img src="header_diviher.svg" alt="Frasco DIVI-HER 60 cápsulas" class="bottle" onerror="this.style.display='none'" />
           <div class="product-name">DIVI<span>-HER</span></div>
           <div class="product-meta">60 cápsulas · Suplemento Dietario<br/>Registro INVIMA SD2021-0001401-R1</div>
           <div class="product-price">
-            <span class="price-old">$170.000</span>
-            <span class="price-new">$140.000</span>
+            <span class="price-old">$ 109.856</span>
+            <span class="price-new">$ 99.500</span>
           </div>
         </div>
         <div class="float-badge b1">
@@ -773,8 +909,74 @@
         </div>
       </div>
       <div>
-        <img src="modo-uso.svg" alt="Estilo de vida saludable" class="how-img" onerror="this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80'" />
+        <img src="Diseño sin título.svg" alt="Estilo de vida saludable con DIVI-HER" class="how-img" />
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- MACA-LIFE COMPLEMENT -->
+<section id="maca-life" class="maca-section">
+  <div class="container">
+    <div class="sec-head-center">
+      <div class="sec-eyebrow" style="color: var(--green);">Complementa tu tratamiento</div>
+      <h2 class="serif sec-title">Potencia tu resultado con <em>Maca-Life</em></h2>
+      <p class="sec-sub">El aliado perfecto de DIVI-HER. Un suplemento natural a base de Maca que acelera la pérdida de peso, te da energía y equilibra tus hormonas.</p>
+    </div>
+
+    <div class="maca-grid">
+      <div>
+        <div class="maca-product-card">
+          <img src="maca_life.svg" alt="Frasco Maca-Life 60 cápsulas Lifehuni" class="maca-bottle" onerror="this.style.display='none'" />
+          <div class="maca-product-name">Maca<span>-Life</span></div>
+          <div class="maca-product-meta">60 cápsulas · Suplemento Dietario · Lifehuni</div>
+        </div>
+      </div>
+      <div class="maca-info">
+        <h3>Principales componentes</h3>
+        <p class="maca-lead">Una fórmula natural diseñada para potenciar tu energía y acelerar la quema de grasa cuando se combina con DIVI-HER.</p>
+        <ul class="maca-components">
+          <li>Raíz de Maca</li>
+          <li>Lecitina de soya</li>
+          <li>Vitamina E</li>
+          <li>Vitamina A</li>
+          <li>Vitamina C</li>
+          <li>Vitamina B1</li>
+          <li>Vitamina B2</li>
+          <li>Vitamina B3 (Niacina)</li>
+          <li>Vitamina B6 (Piridoxina)</li>
+          <li>Vitamina B7 (Biotina)</li>
+          <li>Ácido pantoténico</li>
+          <li>Calcio</li>
+          <li>Selenio</li>
+          <li>Colina</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="combo-banner">
+      <h3>DIVI-HER <span class="plus">+</span> Maca-Life</h3>
+      <p class="combo-sub">El matrimonio perfecto para bajar de peso</p>
+      <div class="combo-ingredients">
+        <span class="combo-tag">🌾 Linaza</span>
+        <span class="combo-tag">🍆 Berenjena</span>
+        <span class="combo-tag">⚙️ Manganeso</span>
+        <span class="combo-tag">💊 Vitaminas B1 y B6</span>
+        <span class="combo-tag">✨ Cromo</span>
+        <span class="combo-tag">🌱 Konjac</span>
+        <span class="combo-tag">🍵 Té Verde</span>
+        <span class="combo-tag">💚 Biotina</span>
+        <span class="combo-tag">⚡ Niacina</span>
+        <span class="combo-tag">🌿 Maca</span>
+        <span class="combo-tag">🧬 Ácido Pantoténico</span>
+        <span class="combo-tag">🦴 Calcio</span>
+        <span class="combo-tag">🔋 Selenio</span>
+        <span class="combo-tag">🫘 Lecitina de soya</span>
+        <span class="combo-tag">💎 Vitaminas A, C y E</span>
+      </div>
+      <a href="https://wa.me/573159251354?text=Hola,%20quiero%20pedir%20el%20combo%20DIVI-HER%20%2B%20Maca-Life%20a%20Bogot%C3%A1" class="btn-primary">
+        💬 Pedir el combo completo
+      </a>
     </div>
   </div>
 </section>
@@ -828,7 +1030,7 @@
       <div>
         <div class="sec-eyebrow" style="color: var(--orange-soft);">Domicilio Bogotá</div>
         <h2 class="serif sec-title">Tu DIVI-HER llega <em style="color: var(--orange); font-style: italic;">hoy mismo</em></h2>
-        <p style="color: rgba(255,255,255,0.85); font-size: 18px;">Envío rápido en toda Bogotá. Paga contra entrega o por transferencia.</p>
+        <p style="color: rgba(255,255,255,0.85); font-size: 15px;">Envío rápido en toda Bogotá. Paga contra entrega o por transferencia.</p>
         <ul class="delivery-list">
           <li><span class="check">✓</span> Domicilio gratis por compras superiores a $200.000</li>
           <li><span class="check">✓</span> Entrega en 24 horas en todas las localidades</li>
@@ -836,7 +1038,7 @@
           <li><span class="check">✓</span> Producto 100% original con sello INVIMA</li>
           <li><span class="check">✓</span> Asesoría gratuita por WhatsApp</li>
         </ul>
-        <a href="https://wa.me/573159251354?text=Hola,%20quiero%20pedir%20DIVI-HER%20a%20Bogot%C3%A1" class="btn-primary">
+        <a href="https://wa.me/573159251354?text=Hola,%20quiero%20pedir%20DIVI-HER%20a%20Bogot%C3%A1" class="btn-primary" style="padding: 14px 26px; font-size: 15px;">
           💬 Pedir por WhatsApp
         </a>
       </div>
@@ -856,7 +1058,7 @@
           <div class="zone">San Cristóbal</div>
           <div class="zone">Tunjuelito</div>
         </div>
-        <p style="font-size: 13px; color: var(--muted); text-align: center;">Y todas las demás localidades. También enviamos a Soacha, Chía y Cajicá.</p>
+        <p style="font-size: 12px; color: var(--muted); text-align: center;">Y todas las demás localidades. También enviamos a Soacha, Chía y Cajicá.</p>
       </div>
     </div>
   </div>
