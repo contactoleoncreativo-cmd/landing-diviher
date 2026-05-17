@@ -338,6 +338,8 @@
     .hero { padding: 50px 0 60px; }
     .float-badge.b1 { left: 0; }
     .float-badge.b2 { right: 0; }
+    .bottle { max-width: 100%; }
+    .product-card { padding: 30px 24px; }
   }
 
   /* ====== STATS BAR ====== */
@@ -881,7 +883,10 @@
               <span class="seal-stars">★ ★ ★</span>
             </div>
           </div>
-          <img src="header_diviher.svg" alt="Frasco DIVI-HER 60 cápsulas" class="bottle" onerror="this.style.display='none'" />
+          <picture>
+            <source media="(max-width: 900px)" srcset="diviherheadermobile.svg" />
+            <img src="header_diviher.svg" alt="Frasco DIVI-HER 60 cápsulas" class="bottle" onerror="this.style.display='none'" />
+          </picture>
           <div class="product-name">DIVI<span>-HER</span></div>
           <div class="product-meta">60 cápsulas · Suplemento Dietario<br/>Registro INVIMA SD2021-0001401-R1</div>
           <div class="product-price">
@@ -1055,7 +1060,7 @@
         </div>
       </div>
       <div>
-        <img src="usodivigood.svg" alt="Estilo de vida saludable con DIVI-HER" class="how-img" />
+        <img src="usodivigood.svg" alt="Uso correcto de DIVI-HER" class="how-img" />
       </div>
     </div>
   </div>
