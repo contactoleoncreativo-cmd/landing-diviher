@@ -194,6 +194,8 @@
     max-width: 150px;
   }
   .float-badge .emoji { font-size: 24px; }
+  .b2-mobile { display: none; }
+  .b2-desktop { display: inline; }
 
   /* ====== ORIGINAL PRODUCT SEAL ====== */
   .original-seal {
@@ -337,7 +339,23 @@
     .hero-grid { grid-template-columns: 1fr; }
     .hero { padding: 50px 0 60px; }
     .float-badge.b1 { left: 0; }
-    .float-badge.b2 { right: 0; }
+    .float-badge.b2 {
+      right: 50%;
+      bottom: -22px;
+      transform: translateX(50%) rotate(-2deg) scale(1);
+      padding: 6px 12px;
+      font-size: 10.5px;
+      max-width: 160px;
+      white-space: nowrap;
+      border-radius: 50px;
+    }
+    .float-badge.b2 span:last-child {
+      display: inline;
+    }
+    .float-badge.b2 .emoji { font-size: 14px; }
+    .float-badge.b2 br { display: none; }
+    .b2-desktop { display: none; }
+    .b2-mobile { display: inline; }
     .bottle { max-width: 100%; }
     .product-card { padding: 30px 24px; }
   }
@@ -832,9 +850,84 @@
     50% { transform: translateY(-8px); }
   }
   .wa-float:hover { transform: scale(1.1); }
+
+  /* ====== DETOX PROMO BAR ====== */
+  .promo-bar {
+    background: linear-gradient(90deg, #F26B22 0%, #FF8B3D 25%, #FFD700 50%, #FF8B3D 75%, #F26B22 100%);
+    background-size: 200% 100%;
+    animation: promo-shimmer 4s linear infinite;
+    color: white;
+    text-align: center;
+    padding: 12px 16px;
+    font-weight: 700;
+    position: relative;
+    z-index: 101;
+    box-shadow: 0 2px 12px rgba(242, 107, 34, 0.3);
+    overflow: hidden;
+  }
+  .promo-bar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    animation: promo-sweep 3s ease-in-out infinite;
+  }
+  .promo-bar a {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.2s;
+  }
+  .promo-bar a:hover {
+    transform: scale(1.03);
+  }
+  .promo-bar a strong {
+    background: rgba(0,0,0,0.18);
+    padding: 3px 10px;
+    border-radius: 50px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+  .promo-bar .arrow {
+    display: inline-block;
+    animation: promo-point 1.2s ease-in-out infinite;
+    font-size: 18px;
+  }
+  @keyframes promo-shimmer {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+  }
+  @keyframes promo-sweep {
+    0% { left: -100%; }
+    50%, 100% { left: 100%; }
+  }
+  @keyframes promo-point {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+  }
+  @media (max-width: 600px) {
+    .promo-bar { padding: 10px 12px; }
+    .promo-bar a { font-size: 12.5px; gap: 5px; flex-wrap: wrap; justify-content: center; line-height: 1.3; }
+    .promo-bar a strong { padding: 2px 8px; font-size: 12px; }
+    .promo-bar .arrow { font-size: 16px; }
+  }
 </style>
 </head>
 <body>
+
+<!-- PROMO BAR DETOX -->
+<div class="promo-bar">
+  <a href="https://wa.me/573159251354?text=Hola%2C%20quiero%20preguntar%20por%20el%20DETOX%20DIGESTIVO%20Y%20HEP%C3%81TICO%20%F0%9F%A5%B3">
+    🥳 Pregunta por <strong>DETOX DIGESTIVO Y HEPÁTICO</strong> 😅 <span class="arrow">👉</span>
+  </a>
+</div>
 
 <!-- NAVIGATION -->
 <nav>
@@ -884,7 +977,7 @@
             </div>
           </div>
           <picture>
-            <source media="(max-width: 900px)" srcset="diviherheadermobile.svg" />
+            <source media="(max-width: 900px)" srcset="diviherheadermobile.png" />
             <img src="header_diviher.svg" alt="Frasco DIVI-HER 60 cápsulas" class="bottle" onerror="this.style.display='none'" />
           </picture>
           <div class="product-name">DIVI<span>-HER</span></div>
@@ -900,7 +993,7 @@
         </div>
         <div class="float-badge b2">
           <span class="emoji">🚴</span>
-          <span>Domicilio en 24h<br/>en Bogotá</span>
+          <span><span class="b2-desktop">Domicilio en 24h<br/>en Bogotá</span><span class="b2-mobile">24h en Bogotá</span></span>
         </div>
       </div>
     </div>
